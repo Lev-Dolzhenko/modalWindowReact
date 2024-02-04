@@ -1,0 +1,61 @@
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+
+  background-color: $colorBgSecondary;
+  padding: 30px 30px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px $colorBlack;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+
+  z-index: 10;
+
+  transition: opacity 0.2s linear;
+
+  img {
+    border: 5px;
+    width: 200px;
+  }
+
+  .modal_button {
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: $colorAccent;
+      border-radius: 5px;
+      padding: 5px 10px;
+
+      transition: background-color 0.1s linear, transform 0.1s linear,
+        box-shadow 0.1s linear;
+
+      text-transform: uppercase;
+      font-weight: 500;
+
+      &:hover {
+        background-color: $colorAccentHover;
+        transform: scale(1.05);
+        box-shadow: 0 0 5px $colorAccentHover;
+      }
+    }
+  }
+}
+
+.open {
+  animation: showModal 0.2s linear forwards;
+}
+
+.close {
+  animation: hideModal 0.2s linear forwards;
+}
