@@ -13,7 +13,7 @@ function App() {
     <>
       <div className={`overlay ${isModal ? '' : 'none'}`}></div>
       <div className="container container__wrapper">
-        {isModal ? <Modal isModal={isModal} onClickModal={onClickModal}/> : null}
+        {<Modal isModal={isModal} onClickModal={onClickModal}/>}
 
         <button onClick={onClickModal} className="openModal">
           Open modal window
